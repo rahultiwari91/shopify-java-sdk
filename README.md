@@ -1,5 +1,7 @@
 # Shopify Java SDK
-Shopify Java SDK for Orders and Gift Cards
+Shopify Java SDK for Orders and Gift Cards.
+
+Generate the JAR from this repository the include it in your project libs folder. Now, follow the below steps to use the generated Jar in your project:
 
 ## Property File Configuration
 The following properties will be used to create the Shopify API Context:
