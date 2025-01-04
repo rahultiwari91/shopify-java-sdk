@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.shopify.api.ShopifyClientTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-09-06T07:30:22" hostname="DESKTOP-68BCEPJ" time="6.112">
+  <properties/>
+  <testcase name="ShopifyClientInputStreamTest" classname="com.shopify.api.ShopifyClientTest" time="6.112"/>
+  <system-out><![CDATA[All GiftCards:{
+  "gift_cards" : [ {
+    "id" : 185643303005,
+    "balance" : 100.00,
+    "created_at" : "2019-09-06T07:12:02.000Z",
+    "updated_at" : "2019-09-06T07:12:02.000Z",
+    "currency" : "USD",
+    "initial_value" : 100.00,
+    "api_client_id" : 3087287,
+    "note" : "ITPLGCI1PEI1GCN1",
+    "last_characters" : "g2c4"
+  }, {
+    "id" : 185642975325,
+    "balance" : 100.00,
+    "created_at" : "2019-09-06T06:54:52.000Z",
+    "updated_at" : "2019-09-06T06:54:52.000Z",
+    "currency" : "USD",
+    "initial_value" : 100.00,
+    "api_client_id" : 3087287,
+    "note" : "ITPL GCI1 PEI1 GCN2",
+    "template_suffix" : "gift_cards.ignitiv.liquid",
+    "last_characters" : "gcn2"
+  }, {
+    "id" : 185391906909,
+    "balance" : 100.00,
+    "created_at" : "2019-08-23T05:48:30.000Z",
+    "updated_at" : "2019-09-06T07:20:55.000Z",
+    "currency" : "USD",
+    "initial_value" : 100.00,
+    "disabled_at" : "2019-09-06T03:20:55-04:00",
+    "api_client_id" : 3087287,
+    "note" : "ITPLGCI1PEI1GCN1",
+    "last_characters" : "gcn1"
+  } ]
+}
+getGiftCard:{
+  "id" : 0,
+  "gift_card" : {
+    "id" : 185391906909,
+    "balance" : "100.00",
+    "created_at" : "2019-08-23T01:48:30-04:00",
+    "updated_at" : "2019-09-06T03:20:55-04:00",
+    "currency" : "USD",
+    "initial_value" : "100.00",
+    "disabled_at" : "2019-09-06T03:20:55-04:00",
+    "line_item_id" : null,
+    "api_client_id" : 3087287,
+    "user_id" : null,
+    "customer_id" : null,
+    "note" : "ITPLGCI1PEI1GCN1",
+    "expires_on" : null,
+    "template_suffix" : null,
+    "last_characters" : "gcn1",
+    "order_id" : null
+  }
+}
+getGiftCardsByStatus:{
+  "gift_cards" : [ {
+    "id" : 185643303005,
+    "balance" : 100.00,
+    "created_at" : "2019-09-06T07:12:02.000Z",
+    "updated_at" : "2019-09-06T07:12:02.000Z",
+    "currency" : "USD",
+    "initial_value" : 100.00,
+    "api_client_id" : 3087287,
+    "note" : "ITPLGCI1PEI1GCN1",
+    "last_characters" : "g2c4"
+  }, {
+    "id" : 185642975325,
+    "balance" : 100.00,
+    "created_at" : "2019-09-06T06:54:52.000Z",
+    "updated_at" : "2019-09-06T06:54:52.000Z",
+    "currency" : "USD",
+    "initial_value" : 100.00,
+    "api_client_id" : 3087287,
+    "note" : "ITPL GCI1 PEI1 GCN2",
+    "template_suffix" : "gift_cards.ignitiv.liquid",
+    "last_characters" : "gcn2"
+  }, {
+    "id" : 185391906909,
+    "balance" : 100.00,
+    "created_at" : "2019-08-23T05:48:30.000Z",
+    "updated_at" : "2019-09-06T07:20:55.000Z",
+    "currency" : "USD",
+    "initial_value" : 100.00,
+    "disabled_at" : "2019-09-06T03:20:55-04:00",
+    "api_client_id" : 3087287,
+    "note" : "ITPLGCI1PEI1GCN1",
+    "last_characters" : "gcn1"
+  } ]
+}
+getGiftCardCount:{
+  "count" : 3
+}
+getGiftCardCountByStatus:{
+  "count" : 3
+}
+Search Results(getGiftCards):{
+  "gift_cards" : [ {
+    "id" : 185391906909,
+    "balance" : 100.00,
+    "created_at" : "2019-08-23T05:48:30.000Z",
+    "updated_at" : "2019-09-06T07:20:55.000Z",
+    "currency" : "USD",
+    "initial_value" : 100.00,
+    "disabled_at" : "2019-09-06T03:20:55-04:00",
+    "api_client_id" : 3087287,
+    "note" : "ITPLGCI1PEI1GCN1",
+    "last_characters" : "gcn1"
+  } ]
+}
+]]></system-out>
+  <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+com.shopify.api.ApiException: Unknown Error with Status Code: 422
+	at com.shopify.client.ShopifyClientImpl.ensureSuccess(ShopifyClientImpl.java:414)
+	at com.shopify.client.ShopifyClientImpl.executeRequest(ShopifyClientImpl.java:127)
+	at com.shopify.api.resources.commerce.GiftCardResource.createGiftCard(GiftCardResource.java:125)
+	at com.shopify.api.ShopifyClientTest.createGiftCard(ShopifyClientTest.java:82)
+	at com.shopify.api.ShopifyClientTest.ShopifyClientInputStreamTest(ShopifyClientTest.java:55)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:305)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:365)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:330)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:78)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:328)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:65)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:292)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:305)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:412)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:86)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:49)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:69)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:48)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.messaging.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.messaging.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:105)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.messaging.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:360)
+	at org.gradle.internal.concurrent.DefaultExecutorFactory$StoppableExecutorImpl$1.run(DefaultExecutorFactory.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+com.shopify.api.ApiException: /admin/api/2019-07/gift_cards/0.json not found
+	at com.shopify.client.ShopifyClientImpl.ensureSuccess(ShopifyClientImpl.java:414)
+	at com.shopify.client.ShopifyClientImpl.executeRequest(ShopifyClientImpl.java:127)
+	at com.shopify.api.resources.commerce.GiftCardResource.updateGiftCard(GiftCardResource.java:157)
+	at com.shopify.api.ShopifyClientTest.updateGiftCard(ShopifyClientTest.java:100)
+	at com.shopify.api.ShopifyClientTest.ShopifyClientInputStreamTest(ShopifyClientTest.java:58)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:305)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:365)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:330)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:78)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:328)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:65)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:292)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:305)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:412)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:86)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:49)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:69)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:48)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.messaging.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.messaging.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:105)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.messaging.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:360)
+	at org.gradle.internal.concurrent.DefaultExecutorFactory$StoppableExecutorImpl$1.run(DefaultExecutorFactory.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+com.shopify.api.ApiException: /admin/api/2019-07/gift_cards/185391906909/disable.json not found
+	at com.shopify.client.ShopifyClientImpl.ensureSuccess(ShopifyClientImpl.java:414)
+	at com.shopify.client.ShopifyClientImpl.executeRequest(ShopifyClientImpl.java:127)
+	at com.shopify.api.resources.commerce.GiftCardResource.disableGiftCard(GiftCardResource.java:173)
+	at com.shopify.api.ShopifyClientTest.disableGiftCard(ShopifyClientTest.java:119)
+	at com.shopify.api.ShopifyClientTest.ShopifyClientInputStreamTest(ShopifyClientTest.java:61)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:305)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:365)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:330)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:78)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:328)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:65)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:292)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:305)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:412)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:86)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:49)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:69)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:48)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.messaging.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.messaging.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:105)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.messaging.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:360)
+	at org.gradle.internal.concurrent.DefaultExecutorFactory$StoppableExecutorImpl$1.run(DefaultExecutorFactory.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+]]></system-err>
+</testsuite>

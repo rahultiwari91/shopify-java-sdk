@@ -1,0 +1,66 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'maven'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+archivesBaseName='shopify-api'
+version = '1.0.0'
+group='com.shopify.api'
+
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'Shopify Java API', 'Implementation-Version': version
+    }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '3.4'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    ext {
+		jacksonVersion='2.10.0.pr1'
+	}
+    
+	compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: jacksonVersion
+	compile group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-joda', version: jacksonVersion
+	compile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: jacksonVersion
+	compile group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: jacksonVersion
+	
+	compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.9'
+	
+	compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.28'
+	
+	compile group: 'org.apache.commons', name: 'commons-io', version: '1.3.2'
+	compile group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.9'
+	
+	compile group: 'org.datanucleus', name: 'datanucleus-core', version: '5.2.1'
+	
+    testCompile group: 'junit', name: 'junit', version: '4.+'
+}
+
+test {
+    systemProperties 'property': 'value'
+}
+
+task sourcesJar(type: Jar) {
+    classifier = 'sources'
+    from sourceSets.main.allSource
+}
+
+task javadocJar(type: Jar) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+
+artifacts {
+    archives sourcesJar
+    archives javadocJar
+}
